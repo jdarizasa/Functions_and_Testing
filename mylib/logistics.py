@@ -53,6 +53,7 @@ def total_distance(city_dict):
 
     return total_distance_km
 
+
 # estimates the travel time between two cities given a speed in km/h
 def estimate_travel_time(city1, city2, speed_kmh=80):
     """

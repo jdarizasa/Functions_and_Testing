@@ -1,5 +1,6 @@
 from mylib.logistics import get_distance, total_distance, cities, estimate_travel_time
 
+
 def test_get_distance():
     # Test distance between New York and Los Angeles
     dist = get_distance("New York", "Los Angeles")
@@ -16,16 +17,20 @@ def test_get_distance():
     except ValueError:
         pass
 
+
 def test_total_distance():
     # Test total distance for a dictionary of cities
     city_dict = {
         "New York": (40.7128, -74.0060),
-        "Los Angeles": (34.0522, -118.2437),    
-        "Chicago": (41.8781, -87.6298)
+        "Los Angeles": (34.0522, -118.2437),
+        "Chicago": (41.8781, -87.6298),
     }
     dist = total_distance(city_dict)
-    expected_dist = get_distance("New York", "Los Angeles") + get_distance("Los Angeles", "Chicago")
+    expected_dist = get_distance("New York", "Los Angeles") + get_distance(
+        "Los Angeles", "Chicago"
+    )
     assert round(dist, 2) == round(expected_dist, 2)
+
 
 def test_estimate_travel_time():
     # Test travel time between New York and Los Angeles at 80 km/h
