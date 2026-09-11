@@ -7,4 +7,5 @@ uvicorn==0.18.3
 black
 wikipedia==1.4.0
 ipdb
+geopy
 git+https://github.com/LIAAD/yake
